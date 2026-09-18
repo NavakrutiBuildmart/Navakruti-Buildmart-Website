@@ -116,18 +116,21 @@
         .navbar {
             max-width: 1200px;
             margin: auto;
-            padding: 16px 20px;
+            padding: 12px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
-        .logo-text {
-            font-family: "MADE Mirage", Georgia, serif;
-            font-size: 23px;
-            font-weight: 700;
-            letter-spacing: 0.7px;
-            color: var(--blue);
+        .logo-link {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-image {
+            height: 58px;
+            width: auto;
+            display: block;
         }
 
         .nav-links {
@@ -214,8 +217,8 @@
 
         h1 {
             color: var(--blue);
-            font-family: "MADE Mirage", Georgia, serif;
             font-size: clamp(45px, 6vw, 76px);
+            font-weight: 700;
             line-height: 1.08;
             margin-bottom: 25px;
         }
@@ -287,8 +290,8 @@
 
         .section-heading h2 {
             color: var(--blue);
-            font-family: "MADE Mirage", Georgia, serif;
             font-size: 42px;
+            font-weight: 700;
             line-height: 1.2;
             margin-bottom: 15px;
         }
@@ -356,8 +359,8 @@
 
         .category-card h3 {
             color: var(--blue);
-            font-family: "MADE Mirage", Georgia, serif;
             font-size: 23px;
+            font-weight: 700;
             margin-bottom: 10px;
         }
 
@@ -381,8 +384,8 @@
 
         .more-solutions h3 {
             color: var(--blue);
-            font-family: "MADE Mirage", Georgia, serif;
             font-size: 25px;
+            font-weight: 700;
             margin-bottom: 12px;
         }
 
@@ -425,8 +428,8 @@
 
         .about h2 {
             color: var(--blue);
-            font-family: "MADE Mirage", Georgia, serif;
             font-size: 45px;
+            font-weight: 700;
             line-height: 1.2;
         }
 
@@ -455,8 +458,8 @@
 
         .contact-box h3 {
             color: var(--blue);
-            font-family: "MADE Mirage", Georgia, serif;
             font-size: 25px;
+            font-weight: 700;
             margin-bottom: 17px;
         }
 
@@ -486,10 +489,11 @@
             margin: auto;
         }
 
-        .footer-logo {
-            font-family: "MADE Mirage", Georgia, serif;
-            font-size: 23px;
-            font-weight: 700;
+        .footer-logo-image {
+            height: 58px;
+            width: auto;
+            display: block;
+            margin-bottom: 12px;
         }
 
         .footer-container p {
@@ -498,7 +502,7 @@
         }
 
         .footer-gold {
-            color: var(--gold);
+            color: var(--gold) !important;
         }
 
 
@@ -538,6 +542,7 @@
                 opacity: 0;
                 transform: translateY(8px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -601,9 +606,10 @@
             justify-content: center;
             cursor: pointer;
             color: var(--blue);
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 700;
             transition: 0.2s ease;
+            touch-action: none;
         }
 
         .whatsapp-button:hover {
@@ -618,11 +624,11 @@
         @media (max-width: 800px) {
 
             .navbar {
-                padding: 14px 18px;
+                padding: 10px 18px;
             }
 
-            .logo-text {
-                font-size: 18px;
+            .logo-image {
+                height: 45px;
             }
 
             .nav-links {
@@ -678,6 +684,10 @@
                 padding: 28px 22px;
             }
 
+            .footer-logo-image {
+                height: 48px;
+            }
+
             .whatsapp-wrapper {
                 right: 15px;
                 bottom: 15px;
@@ -702,18 +712,39 @@
 <header>
     <nav class="navbar">
 
-        <a href="#home" class="logo-text">
-            NAVAKRUTI BUILDMART
+        <a href="#home" class="logo-link">
+            <img
+                src="logo.png"
+                alt="Navakruti Buildmart"
+                class="logo-image"
+            >
         </a>
 
         <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#products">Products</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a class="nav-button" href="tel:+917499329996">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#products">
+                Products
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a
+                class="nav-button"
+                href="tel:+917499329996"
+            >
                 Call Us
             </a>
+
         </div>
 
     </nav>
@@ -748,13 +779,17 @@
 
             <div class="buttons">
 
-                <a class="button button-primary"
-                   href="#products">
+                <a
+                    class="button button-primary"
+                    href="#products"
+                >
                     Explore Products
                 </a>
 
-                <a class="button button-secondary"
-                   href="#contact">
+                <a
+                    class="button button-secondary"
+                    href="#contact"
+                >
                     Visit Our Showroom
                 </a>
 
@@ -796,6 +831,7 @@
         <div class="categories">
 
             <!-- 01 -->
+
             <div class="category-card">
 
                 <div class="category-number">
@@ -815,6 +851,7 @@
 
 
             <!-- 02 -->
+
             <div class="category-card">
 
                 <div class="category-number">
@@ -833,6 +870,7 @@
 
 
             <!-- 03 -->
+
             <div class="category-card">
 
                 <div class="category-number">
@@ -851,6 +889,7 @@
 
 
             <!-- 04 -->
+
             <div class="category-card">
 
                 <div class="category-number">
@@ -869,6 +908,7 @@
 
 
             <!-- 05 -->
+
             <div class="category-card">
 
                 <div class="category-number">
@@ -1034,10 +1074,12 @@
                     Maharashtra – 411046
                 </p>
 
-                <a class="button button-primary"
-                   href="https://www.google.com/maps/search/?api=1&query=Navakruti%20Buildmart%20Ambegaon%20Budruk%20Pune"
-                   target="_blank"
-                   rel="noopener">
+                <a
+                    class="button button-primary"
+                    href="https://www.google.com/maps/search/?api=1&query=Navakruti%20Buildmart%20Ambegaon%20Budruk%20Pune"
+                    target="_blank"
+                    rel="noopener"
+                >
                     Get Directions
                 </a>
 
@@ -1054,6 +1096,7 @@
 
                 <p>
                     <strong>Phone:</strong>
+
                     <a href="tel:+917499329996">
                         +91 74993 29996
                     </a>
@@ -1061,19 +1104,24 @@
 
                 <p>
                     <strong>WhatsApp:</strong>
-                    <a href="https://wa.me/917499329996"
-                       target="_blank"
-                       rel="noopener">
+
+                    <a
+                        href="https://wa.me/917499329996"
+                        target="_blank"
+                        rel="noopener"
+                    >
                         Chat with us
                     </a>
                 </p>
 
                 <br>
 
-                <a class="button button-primary"
-                   href="https://wa.me/917499329996?text=Hello%20Navakruti%20Buildmart%2C%20I%20would%20like%20to%20enquire%20about%20your%20products."
-                   target="_blank"
-                   rel="noopener">
+                <a
+                    class="button button-primary"
+                    href="https://wa.me/917499329996?text=Hello%20Navakruti%20Buildmart%2C%20I%20would%20like%20to%20enquire%20about%20your%20products."
+                    target="_blank"
+                    rel="noopener"
+                >
                     Send WhatsApp Enquiry
                 </a>
 
@@ -1096,9 +1144,11 @@
 
     <div class="footer-container">
 
-        <div class="footer-logo">
-            NAVAKRUTI BUILDMART
-        </div>
+        <img
+            src="logo.png"
+            alt="Navakruti Buildmart"
+            class="footer-logo-image"
+        >
 
         <p>
             Tiles, Sanitary & Building Materials in Pune
@@ -1121,9 +1171,15 @@
      FLOATING WHATSAPP
 ========================================== -->
 
-<div class="whatsapp-wrapper" id="whatsappWrapper">
+<div
+    class="whatsapp-wrapper"
+    id="whatsappWrapper"
+>
 
-    <div class="whatsapp-popup" id="whatsappPopup">
+    <div
+        class="whatsapp-popup"
+        id="whatsappPopup"
+    >
 
         <div class="whatsapp-header">
 
@@ -1144,10 +1200,12 @@
                 other building and finishing solutions?
             </p>
 
-            <a class="whatsapp-start"
-               href="https://wa.me/917499329996?text=Hello%20Navakruti%20Buildmart%2C%20I%20would%20like%20to%20enquire%20about%20your%20products."
-               target="_blank"
-               rel="noopener">
+            <a
+                class="whatsapp-start"
+                href="https://wa.me/917499329996?text=Hello%20Navakruti%20Buildmart%2C%20I%20would%20like%20to%20enquire%20about%20your%20products."
+                target="_blank"
+                rel="noopener"
+            >
                 Start WhatsApp Chat
             </a>
 
@@ -1156,13 +1214,13 @@
     </div>
 
 
-    <button class="whatsapp-button"
-            id="whatsappButton"
-            aria-label="Open WhatsApp chat"
-            type="button">
-
+    <button
+        class="whatsapp-button"
+        id="whatsappButton"
+        aria-label="Open WhatsApp chat"
+        type="button"
+    >
         <span>WA</span>
-
     </button>
 
 </div>
@@ -1189,7 +1247,9 @@
     });
 
 
-    /* Close popup when clicking outside */
+    /* =========================================
+       CLOSE POPUP WHEN CLICKING OUTSIDE
+    ========================================== */
 
     document.addEventListener("click", function(event) {
 
@@ -1197,7 +1257,9 @@
             document.getElementById("whatsappWrapper");
 
         if (!wrapper.contains(event.target)) {
+
             whatsappPopup.classList.remove("active");
+
         }
 
     });
@@ -1223,10 +1285,15 @@
         startY = event.clientY;
 
         const rect =
-            document.getElementById("whatsappWrapper").getBoundingClientRect();
+            document
+                .getElementById("whatsappWrapper")
+                .getBoundingClientRect();
 
-        initialRight = window.innerWidth - rect.right;
-        initialBottom = window.innerHeight - rect.bottom;
+        initialRight =
+            window.innerWidth - rect.right;
+
+        initialBottom =
+            window.innerHeight - rect.bottom;
 
         whatsappButton.setPointerCapture(event.pointerId);
 
@@ -1239,10 +1306,16 @@
             return;
         }
 
-        const deltaX = event.clientX - startX;
-        const deltaY = event.clientY - startY;
+        const deltaX =
+            event.clientX - startX;
 
-        if (Math.abs(deltaX) > 5 || Math.abs(deltaY) > 5) {
+        const deltaY =
+            event.clientY - startY;
+
+        if (
+            Math.abs(deltaX) > 5 ||
+            Math.abs(deltaY) > 5
+        ) {
             isDragging = true;
         }
 
@@ -1253,8 +1326,11 @@
         const wrapper =
             document.getElementById("whatsappWrapper");
 
-        let newRight = initialRight - deltaX;
-        let newBottom = initialBottom - deltaY;
+        let newRight =
+            initialRight - deltaX;
+
+        let newBottom =
+            initialBottom - deltaY;
 
         const maxRight =
             window.innerWidth - 75;
@@ -1262,11 +1338,23 @@
         const maxBottom =
             window.innerHeight - 75;
 
-        newRight = Math.max(10, Math.min(newRight, maxRight));
-        newBottom = Math.max(10, Math.min(newBottom, maxBottom));
+        newRight =
+            Math.max(
+                10,
+                Math.min(newRight, maxRight)
+            );
 
-        wrapper.style.right = newRight + "px";
-        wrapper.style.bottom = newBottom + "px";
+        newBottom =
+            Math.max(
+                10,
+                Math.min(newBottom, maxBottom)
+            );
+
+        wrapper.style.right =
+            newRight + "px";
+
+        wrapper.style.bottom =
+            newBottom + "px";
 
     });
 
@@ -1277,20 +1365,30 @@
             event.preventDefault();
         }
 
-        whatsappButton.releasePointerCapture(event.pointerId);
+        whatsappButton.releasePointerCapture(
+            event.pointerId
+        );
 
     });
 
 
-    /* Prevent accidental popup opening after dragging */
+    /* =========================================
+       PREVENT POPUP OPENING AFTER DRAGGING
+    ========================================== */
 
-    whatsappButton.addEventListener("click", function(event) {
+    whatsappButton.addEventListener(
+        "click",
+        function(event) {
 
-        if (isDragging) {
-            event.stopImmediatePropagation();
-        }
+            if (isDragging) {
 
-    }, true);
+                event.stopImmediatePropagation();
+
+            }
+
+        },
+        true
+    );
 
 </script>
 
