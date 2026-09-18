@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Mobile responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Basic SEO -->
     <title>Navakruti Buildmart | Tiles, Sanitary & Building Materials in Pune</title>
 
-    <meta name="description" content="Navakruti Buildmart is a tiles, sanitary and building materials showroom in Ambegaon Budruk, Pune. Explore tiles, CP & sanitary, kitchen sinks, adhesives, waterproofing chemicals, natural stones and more.">
+    <meta name="description" content="Navakruti Buildmart is a tiles, sanitary and building materials showroom in Ambegaon Budruk, Pune. Explore tiles, CP & sanitary, kitchen sinks, construction chemicals, adhesives, bath accessories and more.">
 
     <meta name="keywords" content="tiles showroom in Pune, tiles in Pune, floor tiles Pune, wall tiles Pune, sanitary showroom Pune, CP sanitary Pune, kitchen sinks Pune, tile adhesives Pune, waterproofing chemicals Pune, natural stones Pune, Navakruti Buildmart">
 
     <meta name="robots" content="index, follow">
 
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://navakrutibuildmart.com/">
 
-    <!-- Open Graph / Social Sharing -->
+    <!-- Google Font - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Navakruti Buildmart | Tiles, Sanitary & Building Materials">
     <meta property="og:description" content="Tiles, sanitary and building materials showroom in Ambegaon Budruk, Pune.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://navakrutibuildmart.com/">
 
-    <!-- Local Business structured data -->
+    <!-- Local Business Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -48,17 +50,41 @@
     </script>
 
     <style>
+
+        /* =========================================
+           NAVAKRUTI BUILDMART
+           Brand Colours
+           Royal Blue: #143A66
+           Golden: #E1AA50
+           White: #FFFFFF
+        ========================================== */
+
+        :root {
+            --blue: #143A66;
+            --gold: #E1AA50;
+            --white: #FFFFFF;
+            --light-blue: #f4f7fa;
+            --light-gold: #fbf7ef;
+            --text: #202833;
+            --muted: #657180;
+            --border: #e3e8ed;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            color: #222;
-            line-height: 1.6;
-            background: #ffffff;
+            font-family: "Roboto", Arial, Helvetica, sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background: var(--white);
         }
 
         a {
@@ -66,61 +92,111 @@
             color: inherit;
         }
 
-        /* HEADER */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================== */
+
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: #ffffff;
-            border-bottom: 1px solid #e5e5e5;
+            background: rgba(255,255,255,0.97);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(10px);
         }
 
         .navbar {
             max-width: 1200px;
             margin: auto;
-            padding: 18px 20px;
+            padding: 16px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .logo-text {
-            font-size: 22px;
+            font-family: "MADE Mirage", Georgia, serif;
+            font-size: 23px;
             font-weight: 700;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.7px;
+            color: var(--blue);
         }
 
         .nav-links {
             display: flex;
+            align-items: center;
             gap: 28px;
             font-size: 15px;
             font-weight: 600;
         }
 
+        .nav-links a {
+            color: var(--blue);
+            transition: 0.2s ease;
+        }
+
         .nav-links a:hover {
-            opacity: 0.7;
+            color: var(--gold);
         }
 
         .nav-button {
-            padding: 10px 18px;
-            border-radius: 6px;
-            background: #222;
-            color: #fff;
+            padding: 10px 19px;
+            border-radius: 5px;
+            background: var(--blue);
+            color: var(--white) !important;
         }
 
-        /* HERO */
+        .nav-button:hover {
+            background: var(--gold);
+            color: var(--blue) !important;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================== */
+
         .hero {
             min-height: 650px;
             display: flex;
             align-items: center;
-            background: #f5f3ef;
+            background:
+                linear-gradient(
+                    110deg,
+                    #f7f8fa 0%,
+                    #ffffff 58%,
+                    #fbf7ef 100%
+                );
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 50%;
+            border: 1px solid rgba(225,170,80,0.25);
+            right: -170px;
+            bottom: -180px;
         }
 
         .hero-container {
-            max-width: 1200px;
             width: 100%;
+            padding: 90px 20px;
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
             margin: auto;
-            padding: 80px 20px;
         }
 
         .hero-content {
@@ -128,24 +204,27 @@
         }
 
         .eyebrow {
+            color: var(--gold);
             font-size: 14px;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 2.2px;
             text-transform: uppercase;
             margin-bottom: 18px;
         }
 
         h1 {
-            font-size: clamp(42px, 6vw, 72px);
+            color: var(--blue);
+            font-family: "MADE Mirage", Georgia, serif;
+            font-size: clamp(45px, 6vw, 76px);
             line-height: 1.08;
             margin-bottom: 25px;
         }
 
         .hero-text {
             font-size: 20px;
-            max-width: 700px;
+            max-width: 720px;
             margin-bottom: 35px;
-            color: #555;
+            color: var(--muted);
         }
 
         .buttons {
@@ -156,123 +235,250 @@
 
         .button {
             display: inline-block;
-            padding: 14px 24px;
-            border-radius: 6px;
+            padding: 14px 25px;
+            border-radius: 5px;
             font-weight: 700;
+            transition: 0.25s ease;
         }
 
         .button-primary {
-            background: #222;
-            color: #fff;
+            background: var(--blue);
+            color: var(--white);
+        }
+
+        .button-primary:hover {
+            background: var(--gold);
+            color: var(--blue);
+            transform: translateY(-2px);
         }
 
         .button-secondary {
-            border: 1px solid #222;
+            border: 1px solid var(--blue);
+            color: var(--blue);
         }
 
-        /* SECTIONS */
+        .button-secondary:hover {
+            background: var(--blue);
+            color: var(--white);
+        }
+
+
+        /* =========================================
+           GENERAL SECTIONS
+        ========================================== */
+
         section {
-            padding: 80px 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
+            padding: 90px 20px;
         }
 
         .section-heading {
-            max-width: 700px;
-            margin-bottom: 45px;
+            max-width: 720px;
+            margin-bottom: 50px;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
         }
 
         .section-heading h2 {
-            font-size: 38px;
+            color: var(--blue);
+            font-family: "MADE Mirage", Georgia, serif;
+            font-size: 42px;
             line-height: 1.2;
             margin-bottom: 15px;
         }
 
         .section-heading p {
-            color: #666;
+            color: var(--muted);
             font-size: 17px;
         }
 
-        /* CATEGORIES */
+
+        /* =========================================
+           PRODUCTS
+        ========================================== */
+
+        #products {
+            background: var(--white);
+        }
+
         .categories {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 22px;
         }
 
         .category-card {
-            border: 1px solid #e2e2e2;
-            padding: 30px;
+            border: 1px solid var(--border);
+            padding: 32px;
             border-radius: 8px;
-            transition: transform 0.2s ease;
+            background: var(--white);
+            transition: 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: 0.25s ease;
         }
 
         .category-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-5px);
+            border-color: rgba(20,58,102,0.25);
+            box-shadow: 0 12px 30px rgba(20,58,102,0.08);
+        }
+
+        .category-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .category-number {
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
         }
 
         .category-card h3 {
-            font-size: 21px;
+            color: var(--blue);
+            font-family: "MADE Mirage", Georgia, serif;
+            font-size: 23px;
             margin-bottom: 10px;
         }
 
         .category-card p {
-            color: #666;
+            color: var(--muted);
+            font-size: 15px;
         }
 
-        /* ABOUT */
+
+        /* =========================================
+           MORE SOLUTIONS
+        ========================================== */
+
+        .more-solutions {
+            margin-top: 28px;
+            padding: 38px;
+            background: var(--light-gold);
+            border-left: 4px solid var(--gold);
+            border-radius: 7px;
+        }
+
+        .more-solutions h3 {
+            color: var(--blue);
+            font-family: "MADE Mirage", Georgia, serif;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .more-solutions p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .solution-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .solution-tag {
+            background: var(--white);
+            border: 1px solid rgba(20,58,102,0.12);
+            padding: 9px 15px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--blue);
+        }
+
+
+        /* =========================================
+           ABOUT
+        ========================================== */
+
         .about {
-            background: #f7f7f7;
+            background: var(--light-blue);
         }
 
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 65px;
             align-items: center;
         }
 
         .about h2 {
-            font-size: 40px;
+            color: var(--blue);
+            font-family: "MADE Mirage", Georgia, serif;
+            font-size: 45px;
             line-height: 1.2;
-            margin-bottom: 20px;
         }
 
         .about p {
-            color: #555;
-            margin-bottom: 15px;
+            color: var(--muted);
+            margin-bottom: 17px;
         }
 
-        /* CONTACT */
+
+        /* =========================================
+           CONTACT
+        ========================================== */
+
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 25px;
         }
 
         .contact-box {
-            padding: 30px;
-            border: 1px solid #e2e2e2;
+            padding: 35px;
+            border: 1px solid var(--border);
             border-radius: 8px;
+            background: var(--white);
         }
 
         .contact-box h3 {
-            margin-bottom: 15px;
+            color: var(--blue);
+            font-family: "MADE Mirage", Georgia, serif;
+            font-size: 25px;
+            margin-bottom: 17px;
         }
 
         .contact-box p {
-            margin-bottom: 10px;
-            color: #555;
+            margin-bottom: 12px;
+            color: var(--muted);
         }
 
-        /* FOOTER */
+        .contact-box a:not(.button) {
+            color: var(--blue);
+            font-weight: 600;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================== */
+
         footer {
-            background: #222;
-            color: #fff;
-            padding: 45px 20px;
+            background: var(--blue);
+            color: var(--white);
+            padding: 50px 20px;
         }
 
         .footer-container {
@@ -280,15 +486,178 @@
             margin: auto;
         }
 
-        .footer-container p {
-            color: #ccc;
-            margin-top: 8px;
+        .footer-logo {
+            font-family: "MADE Mirage", Georgia, serif;
+            font-size: 23px;
+            font-weight: 700;
         }
 
-        /* MOBILE */
+        .footer-container p {
+            color: rgba(255,255,255,0.75);
+            margin-top: 7px;
+        }
+
+        .footer-gold {
+            color: var(--gold);
+        }
+
+
+        /* =========================================
+           FLOATING WHATSAPP
+        ========================================== */
+
+        .whatsapp-wrapper {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            user-select: none;
+        }
+
+        .whatsapp-popup {
+            width: 290px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+            margin-bottom: 12px;
+            overflow: hidden;
+            display: none;
+            border: 1px solid var(--border);
+        }
+
+        .whatsapp-popup.active {
+            display: block;
+            animation: popupIn 0.2s ease;
+        }
+
+        @keyframes popupIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .whatsapp-header {
+            background: var(--blue);
+            color: var(--white);
+            padding: 16px 18px;
+        }
+
+        .whatsapp-header strong {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .whatsapp-header span {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .whatsapp-body {
+            padding: 18px;
+        }
+
+        .whatsapp-body p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .whatsapp-start {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: var(--gold);
+            color: var(--blue);
+            padding: 11px;
+            border-radius: 5px;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .whatsapp-start:hover {
+            background: var(--blue);
+            color: var(--white);
+        }
+
+        .whatsapp-button {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: var(--gold);
+            border: 3px solid var(--white);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--blue);
+            font-size: 28px;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.07);
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================== */
+
         @media (max-width: 800px) {
+
+            .navbar {
+                padding: 14px 18px;
+            }
+
+            .logo-text {
+                font-size: 18px;
+            }
+
             .nav-links {
+                gap: 12px;
+                font-size: 13px;
+            }
+
+            .nav-links a:nth-child(1),
+            .nav-links a:nth-child(2),
+            .nav-links a:nth-child(3) {
                 display: none;
+            }
+
+            .nav-button {
+                padding: 9px 13px;
+            }
+
+            .hero {
+                min-height: 560px;
+            }
+
+            .hero-container {
+                padding: 75px 20px;
+            }
+
+            .hero-text {
+                font-size: 18px;
+            }
+
+            section {
+                padding: 65px 20px;
+            }
+
+            .section-heading h2 {
+                font-size: 35px;
             }
 
             .categories {
@@ -298,278 +667,438 @@
             .about-grid,
             .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 35px;
             }
 
-            .hero {
-                min-height: 550px;
+            .about h2 {
+                font-size: 38px;
             }
 
-            section {
-                padding: 60px 20px;
+            .more-solutions {
+                padding: 28px 22px;
+            }
+
+            .whatsapp-wrapper {
+                right: 15px;
+                bottom: 15px;
+            }
+
+            .whatsapp-popup {
+                width: calc(100vw - 40px);
+                max-width: 290px;
             }
         }
+
     </style>
 </head>
 
+
 <body>
+
+<!-- =========================================
+     HEADER
+========================================== -->
 
 <header>
     <nav class="navbar">
-        <div class="logo-text">NAVAKRUTI BUILDMART</div>
+
+        <a href="#home" class="logo-text">
+            NAVAKRUTI BUILDMART
+        </a>
 
         <div class="nav-links">
+            <a href="#home">Home</a>
             <a href="#products">Products</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
-            <a class="nav-button" href="tel:+917499329996">Call Us</a>
+            <a class="nav-button" href="tel:+917499329996">
+                Call Us
+            </a>
         </div>
+
     </nav>
 </header>
 
 
 <main>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
+<!-- =========================================
+     HERO
+========================================== -->
 
-                <div class="eyebrow">
-                    Tiles • Sanitary • Building Materials
-                </div>
+<section class="hero" id="home">
 
-                <h1>
-                    Building spaces that feel right.
-                </h1>
+    <div class="hero-container">
 
-                <p class="hero-text">
-                    Navakruti Buildmart is a tiles, sanitary and building materials
-                    showroom in Ambegaon Budruk, Pune, serving customers across
-                    Maharashtra.
-                </p>
+        <div class="hero-content">
 
-                <div class="buttons">
-                    <a class="button button-primary"
-                       href="https://wa.me/917499329996"
-                       target="_blank">
-                        WhatsApp Us
-                    </a>
+            <div class="eyebrow">
+                Tiles • Sanitary • Building Materials
+            </div>
 
-                    <a class="button button-secondary"
-                       href="#products">
-                        Explore Products
-                    </a>
-                </div>
+            <h1>
+                Building spaces that feel right.
+            </h1>
+
+            <p class="hero-text">
+                Navakruti Buildmart brings together tiles, sanitary,
+                building materials and finishing solutions for
+                residential, commercial and construction projects.
+            </p>
+
+            <div class="buttons">
+
+                <a class="button button-primary"
+                   href="#products">
+                    Explore Products
+                </a>
+
+                <a class="button button-secondary"
+                   href="#contact">
+                    Visit Our Showroom
+                </a>
 
             </div>
+
         </div>
-    </section>
+
+    </div>
+
+</section>
 
 
-    <!-- PRODUCTS -->
-    <section id="products">
-        <div class="container">
+<!-- =========================================
+     PRODUCTS
+========================================== -->
 
-            <div class="section-heading">
-                <h2>Our Products</h2>
+<section id="products">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                What We Offer
+            </div>
+
+            <h2>
+                Products for your project.
+            </h2>
+
+            <p>
+                Explore our key product categories for residential,
+                commercial and construction requirements.
+            </p>
+
+        </div>
+
+
+        <div class="categories">
+
+            <!-- 01 -->
+            <div class="category-card">
+
+                <div class="category-number">
+                    01
+                </div>
+
+                <h3>
+                    Tiles
+                </h3>
 
                 <p>
-                    Explore a wide range of products for residential,
-                    commercial and construction projects.
+                    Floor Tiles • Wall Tiles • Large Format & Full Body
+                    Slabs • Other Tile Solutions
                 </p>
-            </div>
-
-            <div class="categories">
-
-                <div class="category-card">
-                    <h3>Tiles</h3>
-                    <p>
-                        Floor tiles, wall tiles and other tile solutions
-                        in different sizes, designs and finishes.
-                    </p>
-                </div>
-
-                <div class="category-card">
-                    <h3>CP & Sanitary</h3>
-                    <p>
-                        Bathroom fittings, sanitaryware and CP fittings
-                        for modern spaces.
-                    </p>
-                </div>
-
-                <div class="category-card">
-                    <h3>Kitchen Sinks</h3>
-                    <p>
-                        Kitchen sinks and related solutions for
-                        residential and commercial kitchens.
-                    </p>
-                </div>
-
-                <div class="category-card">
-                    <h3>Tile Adhesives & Chemicals</h3>
-                    <p>
-                        Tile adhesives, construction chemicals and
-                        related installation products.
-                    </p>
-                </div>
-
-                <div class="category-card">
-                    <h3>Waterproofing</h3>
-                    <p>
-                        Waterproofing chemicals and solutions for
-                        construction and renovation requirements.
-                    </p>
-                </div>
-
-                <div class="category-card">
-                    <h3>Natural Stones & Slabs</h3>
-                    <p>
-                        Natural stones and full-body slabs for
-                        architectural and interior applications.
-                    </p>
-                </div>
-
-                <div class="category-card">
-                    <h3>Mirrors & Glass</h3>
-                    <p>
-                        Mirrors and glass solutions for bathrooms,
-                        interiors and partitions.
-                    </p>
-                </div>
-
-                <div class="category-card">
-                    <h3>Bath Accessories</h3>
-                    <p>
-                        Practical and stylish accessories for
-                        complete bathroom spaces.
-                    </p>
-                </div>
-
-                <div class="category-card">
-                    <h3>More Building Solutions</h3>
-                    <p>
-                        Additional products for construction,
-                        renovation and interior projects.
-                    </p>
-                </div>
 
             </div>
-        </div>
-    </section>
 
 
-    <!-- ABOUT -->
-    <section id="about" class="about">
-        <div class="container">
+            <!-- 02 -->
+            <div class="category-card">
 
-            <div class="about-grid">
-
-                <div>
-                    <h2>
-                        One place for your
-                        building and finishing needs.
-                    </h2>
+                <div class="category-number">
+                    02
                 </div>
 
-                <div>
-                    <p>
-                        Navakruti Buildmart is a building materials showroom
-                        based in Ambegaon Budruk, Pune.
-                    </p>
-
-                    <p>
-                        We bring together tiles, sanitaryware, CP fittings,
-                        kitchen sinks, construction chemicals, waterproofing
-                        products, natural stones, slabs, mirrors, glass
-                        solutions and bath accessories.
-                    </p>
-
-                    <p>
-                        Our aim is to make product selection simpler for
-                        homeowners, contractors, architects, designers and
-                        other customers working on construction and
-                        renovation projects.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- CONTACT -->
-    <section id="contact">
-        <div class="container">
-
-            <div class="section-heading">
-                <h2>Visit Navakruti Buildmart</h2>
+                <h3>
+                    CP & Sanitary
+                </h3>
 
                 <p>
-                    Visit our showroom in Ambegaon Budruk, Pune,
-                    or contact us for product enquiries.
+                    CP Fittings • Sanitaryware • Bathroom Solutions
                 </p>
-            </div>
-
-            <div class="contact-grid">
-
-                <div class="contact-box">
-                    <h3>Showroom</h3>
-
-                    <p>
-                        Godown No.1, Sr No. 4,<br>
-                        Next Left From Brahma Hotel,<br>
-                        Kondhare Godowns, Mumbai Hwy,<br>
-                        Near Silver County Building,<br>
-                        Ambegaon Budruk, Pune,<br>
-                        Maharashtra – 411046
-                    </p>
-
-                    <a class="button button-primary"
-                       href="https://www.google.com/maps/search/?api=1&query=Navakruti%20Buildmart%20Ambegaon%20Budruk%20Pune"
-                       target="_blank">
-                        Get Directions
-                    </a>
-                </div>
-
-
-                <div class="contact-box">
-                    <h3>Contact Us</h3>
-
-                    <p>
-                        <strong>Phone:</strong>
-                        <a href="tel:+917499329996">
-                            +91 74993 29996
-                        </a>
-                    </p>
-
-                    <p>
-                        <strong>WhatsApp:</strong>
-                        <a href="https://wa.me/917499329996"
-                           target="_blank">
-                            Chat with us
-                        </a>
-                    </p>
-
-                    <br>
-
-                    <a class="button button-primary"
-                       href="https://wa.me/917499329996"
-                       target="_blank">
-                        Send WhatsApp Enquiry
-                    </a>
-                </div>
 
             </div>
+
+
+            <!-- 03 -->
+            <div class="category-card">
+
+                <div class="category-number">
+                    03
+                </div>
+
+                <h3>
+                    Kitchen Sinks
+                </h3>
+
+                <p>
+                    Kitchen Sinks • Kitchen Accessories
+                </p>
+
+            </div>
+
+
+            <!-- 04 -->
+            <div class="category-card">
+
+                <div class="category-number">
+                    04
+                </div>
+
+                <h3>
+                    Construction Chemicals & Adhesives
+                </h3>
+
+                <p>
+                    Tile Adhesives • Grouts • Construction Chemicals
+                </p>
+
+            </div>
+
+
+            <!-- 05 -->
+            <div class="category-card">
+
+                <div class="category-number">
+                    05
+                </div>
+
+                <h3>
+                    Bath Accessories
+                </h3>
+
+                <p>
+                    Bathroom Accessories & Complementary Products
+                </p>
+
+            </div>
+
         </div>
-    </section>
+
+
+        <!-- MORE SOLUTIONS -->
+
+        <div class="more-solutions">
+
+            <h3>
+                More Building & Finishing Solutions
+            </h3>
+
+            <p>
+                We also deal in additional products and solutions
+                for construction, renovation and interior requirements.
+            </p>
+
+            <div class="solution-list">
+
+                <span class="solution-tag">
+                    Natural Stones & Slabs
+                </span>
+
+                <span class="solution-tag">
+                    Waterproofing Chemicals
+                </span>
+
+                <span class="solution-tag">
+                    Mirrors
+                </span>
+
+                <span class="solution-tag">
+                    Glass Partitions
+                </span>
+
+                <span class="solution-tag">
+                    Terracotta Products
+                </span>
+
+                <span class="solution-tag">
+                    Other Solutions
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     ABOUT
+========================================== -->
+
+<section id="about" class="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div>
+
+                <div class="section-label">
+                    About Navakruti
+                </div>
+
+                <h2>
+                    One place for your building and finishing needs.
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p>
+                    Navakruti Buildmart is a building materials showroom
+                    based in Ambegaon Budruk, Pune.
+                </p>
+
+                <p>
+                    We bring together tiles, sanitaryware, CP fittings,
+                    kitchen sinks, construction chemicals, adhesives,
+                    bath accessories and other building and finishing
+                    solutions.
+                </p>
+
+                <p>
+                    Our aim is to make product selection simpler for
+                    homeowners, contractors, architects, designers and
+                    customers working on construction and renovation
+                    projects.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     CONTACT
+========================================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Visit & Contact
+            </div>
+
+            <h2>
+                Visit Navakruti Buildmart.
+            </h2>
+
+            <p>
+                Visit our showroom in Ambegaon Budruk, Pune,
+                or contact us for product enquiries.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <!-- SHOWROOM -->
+
+            <div class="contact-box">
+
+                <h3>
+                    Showroom
+                </h3>
+
+                <p>
+                    Godown No.1, Sr No. 4,<br>
+                    Next Left From Brahma Hotel,<br>
+                    Kondhare Godowns, Mumbai Hwy,<br>
+                    Near Silver County Building,<br>
+                    Ambegaon Budruk, Pune,<br>
+                    Maharashtra – 411046
+                </p>
+
+                <a class="button button-primary"
+                   href="https://www.google.com/maps/search/?api=1&query=Navakruti%20Buildmart%20Ambegaon%20Budruk%20Pune"
+                   target="_blank"
+                   rel="noopener">
+                    Get Directions
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="contact-box">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <p>
+                    <strong>Phone:</strong>
+                    <a href="tel:+917499329996">
+                        +91 74993 29996
+                    </a>
+                </p>
+
+                <p>
+                    <strong>WhatsApp:</strong>
+                    <a href="https://wa.me/917499329996"
+                       target="_blank"
+                       rel="noopener">
+                        Chat with us
+                    </a>
+                </p>
+
+                <br>
+
+                <a class="button button-primary"
+                   href="https://wa.me/917499329996?text=Hello%20Navakruti%20Buildmart%2C%20I%20would%20like%20to%20enquire%20about%20your%20products."
+                   target="_blank"
+                   rel="noopener">
+                    Send WhatsApp Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 </main>
 
 
+<!-- =========================================
+     FOOTER
+========================================== -->
+
 <footer>
+
     <div class="footer-container">
 
-        <strong>NAVAKRUTI BUILDMART</strong>
+        <div class="footer-logo">
+            NAVAKRUTI BUILDMART
+        </div>
 
         <p>
             Tiles, Sanitary & Building Materials in Pune
@@ -579,12 +1108,191 @@
             Ambegaon Budruk, Pune, Maharashtra – 411046
         </p>
 
-        <p>
+        <p class="footer-gold">
             © 2026 Navakruti Buildmart. All rights reserved.
         </p>
 
     </div>
+
 </footer>
+
+
+<!-- =========================================
+     FLOATING WHATSAPP
+========================================== -->
+
+<div class="whatsapp-wrapper" id="whatsappWrapper">
+
+    <div class="whatsapp-popup" id="whatsappPopup">
+
+        <div class="whatsapp-header">
+
+            <strong>
+                Chat with Navakruti Buildmart
+            </strong>
+
+            <span>
+                We're here to help with your enquiry.
+            </span>
+
+        </div>
+
+        <div class="whatsapp-body">
+
+            <p>
+                Looking for tiles, sanitary, kitchen sinks or
+                other building and finishing solutions?
+            </p>
+
+            <a class="whatsapp-start"
+               href="https://wa.me/917499329996?text=Hello%20Navakruti%20Buildmart%2C%20I%20would%20like%20to%20enquire%20about%20your%20products."
+               target="_blank"
+               rel="noopener">
+                Start WhatsApp Chat
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <button class="whatsapp-button"
+            id="whatsappButton"
+            aria-label="Open WhatsApp chat"
+            type="button">
+
+        <span>WA</span>
+
+    </button>
+
+</div>
+
+
+<script>
+
+    /* =========================================
+       WHATSAPP POPUP
+    ========================================== */
+
+    const whatsappButton =
+        document.getElementById("whatsappButton");
+
+    const whatsappPopup =
+        document.getElementById("whatsappPopup");
+
+    whatsappButton.addEventListener("click", function(event) {
+
+        event.stopPropagation();
+
+        whatsappPopup.classList.toggle("active");
+
+    });
+
+
+    /* Close popup when clicking outside */
+
+    document.addEventListener("click", function(event) {
+
+        const wrapper =
+            document.getElementById("whatsappWrapper");
+
+        if (!wrapper.contains(event.target)) {
+            whatsappPopup.classList.remove("active");
+        }
+
+    });
+
+
+    /* =========================================
+       SIMPLE DRAGGING
+       Allows the floating WhatsApp button
+       to be moved by the user.
+    ========================================== */
+
+    let isDragging = false;
+    let startX;
+    let startY;
+    let initialRight;
+    let initialBottom;
+
+    whatsappButton.addEventListener("pointerdown", function(event) {
+
+        isDragging = false;
+
+        startX = event.clientX;
+        startY = event.clientY;
+
+        const rect =
+            document.getElementById("whatsappWrapper").getBoundingClientRect();
+
+        initialRight = window.innerWidth - rect.right;
+        initialBottom = window.innerHeight - rect.bottom;
+
+        whatsappButton.setPointerCapture(event.pointerId);
+
+    });
+
+
+    whatsappButton.addEventListener("pointermove", function(event) {
+
+        if (!whatsappButton.hasPointerCapture(event.pointerId)) {
+            return;
+        }
+
+        const deltaX = event.clientX - startX;
+        const deltaY = event.clientY - startY;
+
+        if (Math.abs(deltaX) > 5 || Math.abs(deltaY) > 5) {
+            isDragging = true;
+        }
+
+        if (!isDragging) {
+            return;
+        }
+
+        const wrapper =
+            document.getElementById("whatsappWrapper");
+
+        let newRight = initialRight - deltaX;
+        let newBottom = initialBottom - deltaY;
+
+        const maxRight =
+            window.innerWidth - 75;
+
+        const maxBottom =
+            window.innerHeight - 75;
+
+        newRight = Math.max(10, Math.min(newRight, maxRight));
+        newBottom = Math.max(10, Math.min(newBottom, maxBottom));
+
+        wrapper.style.right = newRight + "px";
+        wrapper.style.bottom = newBottom + "px";
+
+    });
+
+
+    whatsappButton.addEventListener("pointerup", function(event) {
+
+        if (isDragging) {
+            event.preventDefault();
+        }
+
+        whatsappButton.releasePointerCapture(event.pointerId);
+
+    });
+
+
+    /* Prevent accidental popup opening after dragging */
+
+    whatsappButton.addEventListener("click", function(event) {
+
+        if (isDragging) {
+            event.stopImmediatePropagation();
+        }
+
+    }, true);
+
+</script>
 
 </body>
 </html>
